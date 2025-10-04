@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.box-cell:hover {
+  background-color: var(--random-color);
+  transition-duration: 0s;
+}
+/* No change in your CSS, just be sure you have: */
+.box-cell {
+  will-change: background-color;
+}
+
+@media (max-width: 700px) {
+  .background-grid { display: none; }
+}
+
+.box-cell:nth-child(9n + 1):hover { --random-color: rgb(56 189 248); }
+.box-cell:nth-child(9n + 2):hover { --random-color: rgb(34 211 238); }
+.box-cell:nth-child(9n + 3):hover { --random-color: rgb(139 92 246); }
+.box-cell:nth-child(9n + 4):hover { --random-color: rgb(16 185 129); }
+.box-cell:nth-child(9n + 5):hover { --random-color: rgb(245 158 11); }
+.box-cell:nth-child(9n + 6):hover { --random-color: rgb(236 72 153); }
+.box-cell:nth-child(9n + 7):hover { --random-color: rgb(59 130 246); }
+.box-cell:nth-child(9n + 8):hover { --random-color: rgb(168 85 247); }
+.box-cell:nth-child(9n + 9):hover { --random-color: rgb(14 165 233); }
