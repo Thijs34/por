@@ -1,23 +1,24 @@
 import React from "react";
+import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero";
 import { Boxes } from "./components/background-boxes";
+import About from "./sections/about";
 
 export default function App() {
   return (
-    <div className="relative w-screen h-screen bg-[#0a0f1c] overflow-hidden flex items-center justify-center">
-      {/* Background Boxes */}
-      <Boxes className="absolute inset-0 opacity-70" />
-
-      {/* Optional overlay for subtle darkening */}
-      <div className="absolute inset-0 bg-[#0a0f1c] opacity-50 pointer-events-none" />
-
-      {/* Centered Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center">
-        <h1 className="text-white font-extrabold text-5xl md:text-6xl mb-4 drop-shadow">
-          Background Boxes
-        </h1>
-        <p className="text-neutral-300 text-lg md:text-xl">
-          Smooth color trail hover effect
-        </p>
+    <div className="relative w-full min-h-screen bg-[#0a0f1c] overflow-x-hidden">
+      {/* Homepage with Boxes background */}
+      <div className="relative w-full h-screen overflow-hidden">
+        <Boxes className="absolute inset-0 opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1c]/70 via-transparent to-[#0a0f1c]/80 pointer-events-none" />
+        <div className="pointer-events-none container mx-auto max-w-7xl relative z-10 h-full flex flex-col">
+          <Navbar />
+          <Hero />
+        </div>
+      </div>
+      {/* About section BELOW homepage, NO background boxes */}
+      <div className="container mx-auto max-w-7xl">
+        <About />
       </div>
     </div>
   );
