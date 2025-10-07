@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import { Boxes } from "./components/background-boxes";
-import About from "./sections/about";
+import About from "./sections/About";
 
 export default function App() {
   return (
