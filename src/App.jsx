@@ -3,6 +3,7 @@ import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import { Boxes } from "./components/background-boxes";
 import About from "./sections/About";
+import Projects from "./sections/Projects";
 
 export default function App() {
   return (
@@ -19,6 +20,9 @@ export default function App() {
       {/* About section BELOW homepage, NO background boxes */}
       <div className="container mx-auto max-w-7xl">
         <About />
+      </div>
+      <div className="container mx-auto max-w-7xl">
+        <Projects />
       </div>
     </div>
   );
